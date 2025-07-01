@@ -25,3 +25,11 @@ This project features a sticky top navigation bar on every page, implemented usi
 - **About**: Links to the about page with project and contact information (`about.html`).
 
 This ensures smooth navigation and a user-friendly experience, allowing users to quickly switch between different sections of the site from anywhere. The navigation bar is also responsive and adapts to different screen sizes, with a collapsible menu for mobile devices.
+
+## Quick Demonstration
+
+Watch a quick demonstration of the Animal Fun Facts project below:
+
+[![Animal Fun Facts Demo](https://img.youtube.com/vi/u4wl57FZR9w/0.jpg)](https://www.youtube.com/watch?v=u4wl57FZR9w)
+
+_Replace `YOUTUBE_VIDEO_ID` with your actual YouTube video ID to embed the demo._
