@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Fun Facts - Animal Facts</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Animal Fun Facts</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="facts.html">Animal Facts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item d-flex align-items-center ms-2">
+              <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" title="Toggle theme">🌙 Dark</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container py-5">
+    <section>
+      <h1 class="display-5 mb-4">Animal Facts</h1>
+      <form id="animal-fact-form" class="mb-4 d-flex flex-column flex-sm-row gap-2 align-items-center">
+        <input type="text" id="animal-name-input" class="form-control" placeholder="Enter animal name (e.g. cheetah)" required style="max-width: 300px;">
+        <button type="submit" class="btn btn-primary">Get Fun Fact</button>
+        <button type="button" id="random-fact-btn" class="btn btn-success">Get Random Animal Fact</button>
+      </form>
+      <div id="facts-container">
+        <!-- Animal facts will be dynamically loaded here -->
+      </div>
+    </section>
+  </main>
+  <footer class="bg-light text-center py-3 mt-auto">
+    <small>&copy; 2025 Animal Fun Facts. All rights reserved.</small>
+  </footer>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/animalFacts.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>

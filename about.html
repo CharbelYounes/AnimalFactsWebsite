@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animal Fun Facts - About</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Page: About Animal Fun Facts -->
+  <header>
+    <!-- Navigation bar using Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">Animal Fun Facts</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="facts.html">Animal Facts</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about.html">About</a>
+            </li>
+            <li class="nav-item d-flex align-items-center ms-2">
+              <button id="theme-toggle" class="btn btn-outline-secondary btn-sm" title="Toggle theme">🌙 Dark</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="container py-5">
+    <!-- About Section -->
+    <section class="mb-5">
+      <h1 class="display-5 mb-4">About Animal Fun Facts</h1>
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Main about text -->
+          <p class="lead mb-4">
+            Welcome to Animal Fun Facts, your gateway to discovering the amazing world of animals! 
+            Our mission is to educate and entertain by sharing fascinating facts about creatures from around the globe.
+          </p>
+          <p class="mb-4">
+            This website was built as a full-stack project using modern web technologies including HTML5, CSS3, 
+            JavaScript ES6, and Bootstrap 5. We believe that learning about animals should be both fun and interactive.
+          </p>
+        </div>
+        <div class="col-lg-4">
+          <!-- Quick Stats card -->
+          <div class="card bg-light">
+            <div class="card-body text-center">
+              <h5 class="card-title">Quick Stats</h5>
+              <p class="card-text">
+                <strong>6</strong> Animal Cards<br>
+                <strong>5+</strong> Fun Facts<br>
+                <strong>100%</strong> Responsive
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="mb-5">
+      <h2 class="mb-4">Features</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">🐾 Animal Facts</h5>
+              <p class="card-text">Discover interesting facts about various animals through our API integration.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">🖼️ Interactive Gallery</h5>
+              <p class="card-text">Explore our 3D flip cards with stunning animal images and fun facts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">📱 Responsive Design</h5>
+              <p class="card-text">Fully responsive website that works perfectly on all devices.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 text-center">
+            <div class="card-body">
+              <h5 class="card-title">⚡ Modern Tech</h5>
+              <p class="card-text">Built with HTML5, CSS3, ES6 JavaScript, and Bootstrap 5.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="mb-5">
+      <h2 class="mb-4">Contact Us</h2>
+      <div class="row">
+        <div class="col-lg-8">
+          <!-- Contact form -->
+          <form id="contact-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="col-md-6">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="col-12">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" required>
+              </div>
+              <div class="col-12">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4" required></textarea>
+              </div>
+              <div class="col-12">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="col-lg-4">
+          <!-- Get in Touch card -->
+          <div class="card bg-light">
+            <div class="card-body">
+              <h5 class="card-title">Get in Touch</h5>
+              <p class="card-text">
+                Have questions or suggestions? We'd love to hear from you! 
+                Fill out the form and we'll get back to you as soon as possible.
+              </p>
+              <div class="mt-3">
+                <p><strong>Email:</strong> info@animalfunfacts.com</p>
+                <p><strong>Follow us:</strong></p>
+                <div class="d-flex gap-2">
+                  <a href="#" class="btn btn-outline-primary btn-sm">Twitter</a>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Facebook</a>
+                  <a href="#" class="btn btn-outline-primary btn-sm">Instagram</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="bg-light text-center py-3 mt-auto">
+    <!-- Footer content -->
+    <small>&copy; 2025 Animal Fun Facts. All rights reserved.</small>
+  </footer>
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/theme.js"></script>
+</body>
+</html>
