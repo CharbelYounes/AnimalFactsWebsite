@@ -1,22 +1,27 @@
 // contact.js: Handles contact form validation and submission
+
+// Main class for managing the contact form's validation and feedback
 class ContactForm {
   constructor(formId) {
+    // Get the form element by its ID
     this.form = document.getElementById(formId);
     this.init();
   }
 
+  // Initialize event listeners
   init() {
     if (this.form) {
       this.form.addEventListener('submit', (e) => this.handleSubmit(e));
     }
   }
 
+  // Handle form submission: validate, show loading, and simulate sending
   handleSubmit(e) {
     e.preventDefault();
     
     if (this.validateForm()) {
       this.showLoading();
-      // Simulate form submission (in a real app, you'd send to a server)
+      // Simulate form submission (in a real app, it would be sent to a server)
       setTimeout(() => {
         this.showSuccess();
         this.resetForm();
@@ -24,6 +29,7 @@ class ContactForm {
     }
   }
 
+  // Validate all form fields and email format
   validateForm() {
     const name = document.getElementById('name').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -43,17 +49,20 @@ class ContactForm {
     return true;
   }
 
+  // Simple email validation using regex
   isValidEmail(email) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   }
 
+  // Show loading spinner on the submit button
   showLoading() {
     const submitBtn = this.form.querySelector('button[type="submit"]');
     submitBtn.disabled = true;
     submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>Sending...';
   }
 
+  // Show success message and reset button
   showSuccess() {
     const submitBtn = this.form.querySelector('button[type="submit"]');
     submitBtn.disabled = false;
@@ -77,6 +86,7 @@ class ContactForm {
     }, 5000);
   }
 
+  // Show error message below the form
   showError(message) {
     // Remove existing error alerts
     const existingAlerts = this.form.parentNode.querySelectorAll('.alert-danger');
@@ -100,10 +110,13 @@ class ContactForm {
     }, 5000);
   }
 
+  // Reset the form fields
   resetForm() {
     this.form.reset();
   }
 }
+
+// Initialize the ContactForm class when the DOM is ready
 
 document.addEventListener('DOMContentLoaded', () => {
   new ContactForm('contact-form');

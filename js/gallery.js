@@ -1,7 +1,11 @@
 // gallery.js: Handles gallery interactions and 3D card flip logic
+
+// Main class for managing the animal gallery and card flip behavior
 class AnimalGallery {
   constructor(containerId) {
+    // Get the container where the gallery will be rendered
     this.container = document.getElementById(containerId);
+    // List of animals to display in the gallery
     this.animals = [
       { name: 'Lion', image: 'assets/lion.jpg', fact: 'Lions can sleep for up to 20 hours a day!' },
       { name: 'Elephant', image: 'assets/Elephant.jpg', fact: 'Elephants are the only mammals that cannot jump.' },
@@ -13,11 +17,13 @@ class AnimalGallery {
     this.init();
   }
 
+  // Initialize the gallery and event listeners
   init() {
     this.renderGallery();
     this.addEventListeners();
   }
 
+  // Render the animal cards in the gallery
   renderGallery() {
     this.container.innerHTML = this.animals.map(animal => `
       <div class="flip-card" data-animal="${animal.name.toLowerCase()}" tabindex="0">
@@ -39,17 +45,18 @@ class AnimalGallery {
     `).join('');
   }
 
+  // Add event listeners for flipping cards and accessibility
   addEventListeners() {
     // Flip card on click (front side)
     this.container.addEventListener('click', (e) => {
-      // Flip Back button
+      // If the Flip Back button is clicked, flip the card back
       if (e.target.classList.contains('flip-back-btn')) {
         const flipCard = e.target.closest('.flip-card');
         flipCard.classList.remove('flipped');
         flipCard.classList.remove('manual-flip');
         return;
       }
-      // Flip card front
+      // If the front of the card is clicked, flip it to show the back
       const front = e.target.closest('.flip-card-front');
       if (front) {
         const flipCard = front.closest('.flip-card');
@@ -58,7 +65,7 @@ class AnimalGallery {
       }
     });
 
-    // Remove hover flipping for cards with manual-flip
+    // Prevent hover flipping for cards that are manually flipped
     this.container.addEventListener('mouseenter', (e) => {
       const card = e.target.closest('.flip-card');
       if (card && card.classList.contains('manual-flip')) {
@@ -66,7 +73,7 @@ class AnimalGallery {
       }
     }, true);
 
-    // Add keyboard support for accessibility
+    // Add keyboard support for accessibility (Enter/Space to flip)
     this.container.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         const flipCard = e.target.closest('.flip-card');
@@ -80,6 +87,7 @@ class AnimalGallery {
   }
 }
 
+// Initialize the AnimalGallery class when the DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
   new AnimalGallery('gallery-container');
 }); 

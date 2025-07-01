@@ -1,25 +1,32 @@
-/* Theme variables: Define color palette and reusable variables */
+/* =============================
+   Theme variables: Define color palette and reusable variables
+   ============================= */
 :root {
-  --bg-main: #f8fafc;
-  --bg-secondary: #f1f3f6;
-  --text-main: #222;
-  --text-secondary: #666;
-  --primary: #0d6efd;
-  --card-bg: #fff;
-  --card-back-bg: #e3f2fd;
+  --bg-main: #f8fafc; /* Main background color */
+  --bg-secondary: #f1f3f6; /* Secondary background color */
+  --text-main: #222; /* Main text color */
+  --text-secondary: #666; /* Secondary text color */
+  --primary: #0d6efd; /* Primary accent color */
+  --card-bg: #fff; /* Card background (light) */
+  --card-back-bg: #e3f2fd; /* Card back background (light) */
 }
 
+/* =============================
+   Dark theme overrides: Applied when .dark-theme is on body
+   ============================= */
 .dark-theme {
-  --bg-main: #181024;
-  --bg-secondary: #231942;
-  --text-main: #f8f8ff;
-  --text-secondary: #b39ddb;
-  --primary: #a259f7;
-  --card-bg: #231942;
-  --card-back-bg: #3c096c;
+  --bg-main: #181024; /* Main background for dark mode */
+  --bg-secondary: #231942; /* Secondary background for dark mode */
+  --text-main: #f8f8ff; /* Main text color for dark mode */
+  --text-secondary: #b39ddb; /* Secondary text color for dark mode */
+  --primary: #a259f7; /* Primary accent for dark mode */
+  --card-bg: #231942; /* Card background (dark) */
+  --card-back-bg: #3c096c; /* Card back background (dark) */
 }
 
-/* Base styles: Typography, layout, and body settings */
+/* =============================
+   Base styles: Typography, layout, and body settings
+   ============================= */
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
   background: var(--bg-main);
@@ -37,23 +44,29 @@ h1, h2, h3, h4, h5 {
   font-weight: 700;
 }
 
-/* Navbar tweaks: Custom styles for navigation bar */
+/* =============================
+   Navbar tweaks: Custom styles for navigation bar
+   ============================= */
 .navbar {
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Subtle shadow for navbar */
 }
 .navbar-brand {
   font-weight: bold;
   letter-spacing: 1px;
 }
 
-/* Responsive padding for main: Adjusts padding on small screens */
+/* =============================
+   Responsive padding for main: Adjusts padding on small screens
+   ============================= */
 @media (max-width: 576px) {
   main.container {
     padding: 2rem 0.5rem;
   }
 }
 
-/* Button transition: Smooth hover effects for buttons and nav links */
+/* =============================
+   Button transition: Smooth hover effects for buttons and nav links
+   ============================= */
 .btn, .nav-link {
   transition: background 0.3s, color 0.3s, transform 0.2s;
 }
@@ -63,7 +76,9 @@ h1, h2, h3, h4, h5 {
   transform: translateY(-2px) scale(1.05);
 }
 
-/* Card transition: Card background, color, and hover effects */
+/* =============================
+   Card transition: Card background, color, and hover effects
+   ============================= */
 .card {
   transition: box-shadow 0.3s, transform 0.3s;
   background: var(--card-bg);
@@ -74,12 +89,14 @@ h1, h2, h3, h4, h5 {
   transform: translateY(-4px) scale(1.03);
 }
 
-/* 3D Card Flip for Gallery: Flip animation and layout for gallery cards */
+/* =============================
+   3D Card Flip for Gallery: Flip animation and layout for gallery cards
+   ============================= */
 .flip-card {
   background-color: transparent;
   width: 250px;
   height: 320px;
-  perspective: 1000px;
+  perspective: 1000px; /* Adds 3D perspective */
   margin: 1rem auto;
 }
 .flip-card-inner {
@@ -89,6 +106,7 @@ h1, h2, h3, h4, h5 {
   transition: transform 0.6s cubic-bezier(0.4,0.2,0.2,1);
   transform-style: preserve-3d;
 }
+/* Flip on hover or when .flipped is added */
 .flip-card:hover .flip-card-inner, .flip-card.flipped .flip-card-inner {
   transform: rotateY(180deg);
 }
@@ -96,7 +114,7 @@ h1, h2, h3, h4, h5 {
   position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  backface-visibility: hidden; /* Hide back when facing front */
   border-radius: 1rem;
   box-shadow: 0 4px 16px rgba(0,0,0,0.08);
   background: var(--card-bg);
@@ -112,10 +130,12 @@ h1, h2, h3, h4, h5 {
   transform: rotateY(180deg);
   background: var(--card-back-bg);
   z-index: 3;
-  pointer-events: auto;
+  pointer-events: auto; /* Allow clicking on back side */
 }
 
-/* Gallery grid using Flexbox: Layout for gallery cards */
+/* =============================
+   Gallery grid using Flexbox: Layout for gallery cards
+   ============================= */
 #gallery-container {
   display: flex;
   flex-wrap: wrap;
@@ -123,7 +143,9 @@ h1, h2, h3, h4, h5 {
   justify-content: center;
 }
 
-/* Footer: Footer styling */
+/* =============================
+   Footer: Footer styling
+   ============================= */
 footer {
   font-size: 0.95rem;
   color: var(--text-secondary);
@@ -131,33 +153,50 @@ footer {
   border-top: 1px solid #e3e3e3;
 }
 
-/* Dark mode override for Bootstrap .card.bg-light in about section */
+/* =============================
+   Dark mode override for Bootstrap .card.bg-light in about section
+   ============================= */
 .dark-theme .card.bg-light {
   background: #000 !important;
   color: #fff !important;
   border-color: #222 !important;
 }
 
+/* =============================
+   Prevent hover flipping when card is manually flipped
+   ============================= */
 .flip-card.manual-flip:hover .flip-card-inner {
   transform: none !important;
 }
 
+/* =============================
+   Dark mode override for hero section (home page)
+   ============================= */
 .dark-theme .hero-section {
   background: linear-gradient(135deg, #14532d 0%, #052e16 100%) !important;
   color: #e0ffe0;
 }
 
+/* =============================
+   Make muted text white in dark mode for hero and gallery cards
+   ============================= */
 .dark-theme .hero-section .text-muted,
 .dark-theme .flip-card-front .text-muted {
   color: #fff !important;
 }
 
+/* =============================
+   Footer dark mode override
+   ============================= */
 .dark-theme footer {
   background: #181c1f !important;
   color: #b9e0c7 !important;
   border-top: 1px solid #2e3a34 !important;
 }
 
+/* =============================
+   Theme toggle button: Light yellow text and border, yellow background on hover
+   ============================= */
 #theme-toggle {
   color: #ffe066 !important;
   border-color: #ffe066 !important;
