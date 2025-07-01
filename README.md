@@ -30,6 +30,7 @@ This ensures smooth navigation and a user-friendly experience, allowing users to
 
 Watch a quick demonstration of the Animal Fun Facts project below:
 
-[![Animal Fun Facts Demo](https://img.youtube.com/vi/u4wl57FZR9w/0.jpg)](https://www.youtube.com/watch?v=u4wl57FZR9w)
+<p align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/u4wl57FZR9w" title="Animal Fun Facts Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
 
-_Replace `YOUTUBE_VIDEO_ID` with your actual YouTube video ID to embed the demo._
