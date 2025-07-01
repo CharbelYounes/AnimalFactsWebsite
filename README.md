@@ -30,7 +30,7 @@ This ensures smooth navigation and a user-friendly experience, allowing users to
 
 Watch a quick demonstration of the Animal Fun Facts project below:
 
-<p align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/u4wl57FZR9w" title="Animal Fun Facts Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</p>
+
+
+https://github.com/user-attachments/assets/9ee24181-1048-4915-a2b2-9dacbb8b713e
 
